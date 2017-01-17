@@ -1,0 +1,17 @@
+node_modules
+logs/*.log
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+
+# Intellij project files
+*.iml
+.idea/
+
+# Others
+target/
+
+
+node_modules

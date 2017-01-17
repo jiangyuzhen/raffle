@@ -1,0 +1,153 @@
+body {
+  background-image:url(./img/bg/mpj-2017.jpg);
+  background-size:100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin:0px;
+}
+#main {
+  width: 90%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  right: 5%;
+  bottom:0px;
+  background: hsla(0, 0%, 100%, 0.3);
+  overflow: hidden;
+  z-index:-1;
+}
+#main::before{
+  content: '';
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background-image:url(./img/bg/mpj-2017.jpg);
+  background-size:100vw 100vh;
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -ms-filter: blur(6px);
+  -o-filter: blur(6px);
+  filter: blur(6px);
+  margin: -30px;
+}
+#content{
+  text-align: center;
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+}
+.title {
+  margin-top: 15px;
+  font-size: 48px;
+}
+.type{
+  font-size: 26px;
+}
+.person_panel{
+  width: 90%;
+  height:auto;
+  position: absolute;
+  top: 30%;
+}
+.col-xs-5:nth-child(3){
+  width: 24%;
+  float: left;
+}
+.col-xs-5:nth-child(2), .col-xs-5:nth-child(4){
+  width: 20%;
+  float: left;
+  padding-top: 20px;
+}
+.col-xs-5:nth-child(1), .col-xs-5:nth-child(5){
+  width: 18%;
+  float: left;
+  padding-top: 40px;
+}
+.col-xs-1{
+  width: 24%;
+  margin: auto;
+}
+.person {
+  margin: 15px;
+  border:solid 1px #AFAFAF;
+  border-radius: 4px 4px 0px 0px;
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 1px #AFAFAF,
+              0 2px #AFAFAF,
+              0 3px #AFAFAF,
+              0 4px #AFAFAF,
+              0 5px #AFAFAF,
+              0 5px 10px black;
+}
+.person img{
+  width: 160px;
+  height: 200px;
+  max-width: 200px;
+  margin: 15px;
+}
+.msg{
+  position: absolute;
+  bottom: 15px;
+  width: 90%;
+  font-size: 18px;
+}
+.listPanel{
+  position: absolute;
+  z-index: 10;
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  padding-top: 60px;
+}
+.listPanel .level{
+  width: 100%;
+  height: 200px;
+}
+.listPanel .level:nth-child(1){
+  width: 12%;
+  margin: auto;
+}
+.listPanel .level:nth-child(2){
+  width: 22%;
+  margin: auto;
+}
+.listPanel .winner_p{
+  width: 10%;
+  text-align: center;
+  float: left;
+  margin: 8px auto;
+}
+.listPanel .level:nth-child(1) .winner_p{
+  width: 100%;
+  margin: auto;
+}
+.listPanel .level:nth-child(2) .winner_p{
+  width: 50%;
+  text-align: center;
+  float: left;
+}
+.listPanel img{
+  width: 80px;
+  height: 100px;
+}
+.listPanel  p {
+  margin: 0px;
+}
+.font-white, h2{
+  color: #FFF;
+  text-shadow: 1px 1px black,-1px -1px black,
+    1px -1px black,-1px 1px black;
+}
+.font-shine {
+  color: #FFC;
+  text-shadow: 0 0 0.2em, 0 0 0.4em;
+}
+.img {
+  background-size:160px 200px;
+}
+.imglist {
+  background-size:80px 100px;
+}

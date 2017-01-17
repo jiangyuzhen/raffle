@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>门铺集2017年年会抽奖活动</title>
+	<link rel="stylesheet" type="text/css" href="./index.css"/>
+	<link rel="stylesheet" type="text/css" href="./img.css"/>
+	<script src="./name.js"></script>
+	<script src="./lib/angular.min.js"></script>
+</head>
+
+<body ng-app="mpjApp" ng-controller="MpjController">
+	<div id="main" ng-if="show"></div>
+  <div id="content" ng-if="show">
+  	<div>
+  		<div class="font-shine title">门铺集2017年年会抽奖活动</div>
+  		<div class="font-shine type" ng-if="enterNum<=3">
+  			当前奖项:{{prizeType.type}}  共: {{prizeNum}}/{{prizeType.total}}个
+  		</div>
+			<div class="font-shine type" ng-if="enterNum==4">获奖名单</div>
+  		<div class="person_panel"  ng-if="enterNum<=3">
+  			<div ng-class="{true:'col-xs-5',false:'col-xs-1'}[winner.length>1]" ng-repeat="p in winner track by $index">
+  				<div class="person">
+  					<img class="person_{{p.id}} img"/>
+  					<h2>姓名: {{p.name}}</h2>
+  					<h2>工号: {{p.id}}</h2>
+  				</div>
+  			</div>
+  		</div>
+			<div class="listPanel" ng-if="enterNum==4">
+				<div class="level" ng-repeat="persons in winnerList">
+					<h3  class="font-shine">{{persons[0].type}}</h3>
+					<div class="winner_img" ng-repeat="person in persons">
+						<div class="winner_p">
+							<img class="person_{{person.id}} imglist"/>
+							<p class="font-shine">{{person.name}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+  		<!-- <div class="msg font-white">@提示:按enter开始抽奖,再次按enter停止</div> -->
+  	</div>
+  </div>
+	<div>
+		<audio id="audio" src="./raffle.mp3" autobuffer></audio>
+	</div>
+</body>
+<script src="./index.js"></script>
+</html>
