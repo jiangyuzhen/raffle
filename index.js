@@ -50,8 +50,9 @@ angular.module('mpjApp', []).controller('MpjController', function ($sce,$scope, 
   function stop(){
     $interval.cancel(timer);
     timer = null;
-    vm.win.each(function(p){
+    vm.win.map(function(p){
       p.type = prizeTypes[vm.round].type;
+      return p;
     })
     vm.winList[vm.round] = vm.winList[vm.round].concat(vm.win);
     if(vm.round === prizeTypes.length-1){
